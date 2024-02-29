@@ -1,0 +1,36 @@
+// ! Copyright (c) 2024, Brandon Ramirez, brr.dev
+
+@import '../colors';
+
+@keyframes ripple {
+    to {
+        transform: scale(var(--ui-ripple-scale, 4));
+        opacity: 0;
+    }
+}
+
+@mixin ripple-container(
+    $ripple-color: transparentize($white, 0.85),
+    $duration: 1.25s,
+    $ripple-z-index: -1
+) {
+    // Easily disable the ripple on a component by calling the mixin with `false`
+    @if $ripple-color == false {
+        & > span.ui-ripple-circle {
+            display: none;
+        }
+    } @else {
+        position: relative;
+        overflow: hidden;
+
+        & > span.ui-ripple-circle {
+            pointer-events: none;
+            z-index: $ripple-z-index;
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple var(--ui-ripple-duration, $duration) linear;
+            background-color: var(--ui-ripple-color, $ripple-color);
+        }
+    }
+}

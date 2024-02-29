@@ -1,0 +1,8 @@
+// ! Copyright (c) 2024, Brandon Ramirez, brr.dev
+
+@mixin content-safe($width: 1000px, $min-padding: 1rem) {
+    $content-safe-padding: calc((100vw - $width) / 2);
+
+    padding-left: max($content-safe-padding, $min-padding);
+    padding-right: max($content-safe-padding, $min-padding);
+}

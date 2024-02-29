@@ -1,0 +1,14 @@
+// ! Copyright (c) 2024, Brandon Ramirez, brr.dev
+
+@import '../theme';
+
+@mixin raised($level: 0, $shadow-color: $cozy-shadow-color, $offset: 0.05rem) {
+    @if $level == false {
+        box-shadow: none;
+    } @else {
+        box-shadow: 0
+            (($level + 1) * $offset)
+            (($level + 2) * $offset)
+            transparentize($shadow-color, 0.1 + $level * 0.125rem);
+    }
+}

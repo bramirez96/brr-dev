@@ -1,0 +1,15 @@
+// ! Copyright (c) 2024, Brandon Ramirez, brr.dev
+
+/* !IMPORTANT: Don't forget to include "transform" in transition properties */
+@mixin pressable(
+    $growth-scale-factor: 0.005,
+    $shrink-scale-factor: $growth-scale-factor
+) {
+    &:hover {
+        transform: scale(1 + $growth-scale-factor);
+    }
+
+    &:active {
+        transform: scale(1 - $shrink-scale-factor);
+    }
+}

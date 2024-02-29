@@ -1,0 +1,27 @@
+// ! Copyright (c) 2024, Brandon Ramirez, brr.dev
+
+@import 'theme';
+
+@mixin media-med() {
+    @media screen and (width >= $cozy-medium-query) {
+        @content;
+    }
+}
+
+@mixin media-large() {
+    @media screen and (width >= $cozy-large-query) {
+        @content;
+    }
+}
+
+@mixin media-x-large() {
+    @media screen and (width >= $cozy-x-large-query) {
+        @content;
+    }
+}
+
+@mixin media-2x-large() {
+    @media screen and (width >= $cozy-2-x-large-query) {
+        @content;
+    }
+}

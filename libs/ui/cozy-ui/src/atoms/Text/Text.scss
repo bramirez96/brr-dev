@@ -1,0 +1,40 @@
+// ! Copyright (c) 2024, Brandon Ramirez, brr.dev
+
+@import '/src/theme';
+
+// TODO update the fonts to use theme variables
+// TODO add better styling support
+.ui-text {
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: $grey-6;
+
+    .ui-dark-mode & {
+        color: $white;
+    }
+
+    &.type-secondary {
+        font-family: monospace;
+    }
+
+    &.size-x-small {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+
+    &.size-small {
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+    }
+
+    &.size-large {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    &.size-x-large {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+    }
+}

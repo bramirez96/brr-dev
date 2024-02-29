@@ -1,0 +1,23 @@
+// ! Copyright (c) 2024, Brandon Ramirez, brr.dev
+
+@import 'colors';
+
+// Container styling
+$cozy-border-radius: 0.375rem;
+
+// Animation defaults
+$cozy-animation-duration: 0.375s;
+
+// Shadow styling
+$cozy-shadow-color: $grey-6;
+
+// Input styling
+$cozy-placeholder-color: #8c939b;
+$cozy-placeholder-color-hover: darken($cozy-placeholder-color, 10%);
+$cozy-placeholder-thin-color: #6d757e;
+
+// Media query vars
+$cozy-medium-query: 525px;
+$cozy-large-query: 675px;
+$cozy-x-large-query: 850px;
+$cozy-2-x-large-query: 1000px;

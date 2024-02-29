@@ -1,0 +1,9 @@
+// ! Copyright (c) 2024, Brandon Ramirez, brr.dev
+
+@mixin full-page() {
+    // Block styling for template, make it fill the whole page
+    display: block;
+    min-height: 100vh;
+    max-width: 100%;
+    width: 100%;
+}
