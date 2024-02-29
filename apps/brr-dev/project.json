@@ -1,8 +1,0 @@
-{
-  "name": "brr-dev",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/brr-dev",
-  "projectType": "application",
-  "targets": {},
-  "tags": []
-}
