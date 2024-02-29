@@ -1,8 +1,8 @@
 // ! Copyright (c) 2024, Brandon Ramirez, brr.dev
 
+import { classnames } from '@bramirez96/classnames';
 import React, { HTMLProps, MouseEventHandler, useCallback } from 'react';
 import { useInputContext } from '../Input.context';
-import classnames from '@brr-dev/classnames';
 
 export type InputFieldSectionProps = HTMLProps<HTMLSpanElement> & {
     section: 'left' | 'middle' | 'right';

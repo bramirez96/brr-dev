@@ -1,7 +1,7 @@
 // ! Copyright (c) 2024, Brandon Ramirez, brr.dev
 
 import { HTMLProps, ReactNode } from 'react';
-import { LinkProps } from 'react-router-dom';
+// import { LinkProps } from 'react-router-dom';
 import { UISizes } from '../../utils';
 
 // Button types
@@ -24,7 +24,7 @@ export type ButtonProps = Omit<
     children?: ReactNode;
     htmlType?: 'button' | 'submit' | 'reset';
     link?: string;
-    linkTarget?: LinkProps['target'];
+    linkTarget?: HTMLProps<HTMLAnchorElement>['target'];
     disableLink?: boolean;
     iconLeft?: ReactNode;
     iconRight?: ReactNode;

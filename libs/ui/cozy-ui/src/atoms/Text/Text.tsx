@@ -1,8 +1,8 @@
 // ! Copyright (c) 2024, Brandon Ramirez, brr.dev
 
+import { classnames } from '@bramirez96/classnames';
 import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from 'react';
 import './Text.scss';
-import classnames from '@brr-dev/classnames';
 
 export type TextSizes = 'x-small' | 'small' | 'medium' | 'large' | 'x-large';
 

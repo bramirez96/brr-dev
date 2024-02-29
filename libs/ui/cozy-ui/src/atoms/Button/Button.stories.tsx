@@ -1,8 +1,6 @@
 // ! Copyright (c) 2024, Brandon Ramirez, brr.dev
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Button } from './index';
-import './Button.scss';
 import {
     AiOutlineCopy,
     AiOutlineDelete,
@@ -13,6 +11,8 @@ import {
     AiOutlineShareAlt,
     AiOutlineUser,
 } from 'react-icons/ai';
+import Button from './Button';
+import './Button.scss';
 
 const meta: Meta<typeof Button> = {
     component: Button,
@@ -23,7 +23,7 @@ const meta: Meta<typeof Button> = {
         children: '',
         iconLeft: 'none',
         iconRight: 'none',
-        link: '',
+        // link: '',
         linkTarget: '_self',
         disableLink: true,
     },
@@ -62,7 +62,7 @@ const meta: Meta<typeof Button> = {
             name: 'text',
             type: 'string',
         },
-        link: { type: 'string' },
+        // link: { type: 'string' },
         disableLink: { type: 'boolean' },
         // Don't auto-build controls for these props
         htmlType: {
@@ -102,14 +102,14 @@ export const GhostButton: ButtonStory = {
     },
 };
 
-export const LinkButton: ButtonStory = {
-    args: {
-        type: 'text',
-        iconRight: 'export',
-        link: 'https://google.com/not-a-real-path/i-hope',
-        children: 'View portfolio',
-    },
-};
+// export const LinkButton: ButtonStory = {
+//     args: {
+//         type: 'text',
+//         iconRight: 'export',
+//         link: 'https://google.com/not-a-real-path/i-hope',
+//         children: 'View portfolio',
+//     },
+// };
 
 export const IconButton: ButtonStory = {
     args: {

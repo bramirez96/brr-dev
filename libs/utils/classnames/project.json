@@ -1,0 +1,23 @@
+{
+    "name": "classnames",
+    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/utils/classnames/src",
+    "projectType": "library",
+    "targets": {
+        "build": {
+            "executor": "@nx/js:tsc",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/libs/utils/classnames",
+                "main": "libs/utils/classnames/src/index.ts",
+                "tsConfig": "libs/utils/classnames/tsconfig.lib.json",
+                "assets": []
+            }
+        },
+        "publish": {
+            "command": "node tools/scripts/publish.mjs classnames {args.ver} {args.tag}",
+            "dependsOn": ["build"]
+        }
+    },
+    "tags": []
+}

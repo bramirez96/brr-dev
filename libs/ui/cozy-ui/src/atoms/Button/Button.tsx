@@ -1,8 +1,10 @@
 // ! Copyright (c) 2024, Brandon Ramirez, brr.dev
 
-import { ButtonProps } from './Button.types';
+import { classnames } from '@bramirez96/classnames';
+import { useCallback } from 'react';
+import { createRipple } from '../../utils';
 import './Button.scss';
-import classnames from '@brr-dev/classnames';
+import { ButtonProps } from './Button.types';
 
 export default function Button({
     children,
@@ -12,8 +14,18 @@ export default function Button({
     htmlType = 'button',
     iconLeft = null,
     iconRight = null,
+    onMouseDown,
     ...buttonProps
 }: Omit<ButtonProps, 'link'> = {}) {
+    // Create a ripple effect in the button on mousedown events
+    const _mouseDown = useCallback(
+        (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+            createRipple(event);
+            return onMouseDown?.(event);
+        },
+        [onMouseDown]
+    );
+
     const exactlyOneIcon =
         !children && ((iconLeft && !iconRight) || (iconRight && !iconLeft));
 
@@ -27,6 +39,7 @@ export default function Button({
                 exactlyOneIcon && 'ui-button-square'
             )}
             type={htmlType}
+            onMouseDown={_mouseDown}
             {...buttonProps}
         >
             {iconLeft && <span className="ui-button-icon">{iconLeft}</span>}

@@ -1,8 +1,8 @@
 // ! Copyright (c) 2024, Brandon Ramirez, brr.dev
 
+import { classnames } from '@bramirez96/classnames';
 import { HTMLProps } from 'react';
 import { useInputContext } from '../Input.context';
-import classnames from '@brr-dev/classnames';
 
 export type InputLabelProps = Omit<
     HTMLProps<HTMLLabelElement>,
