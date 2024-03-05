@@ -1,6 +1,7 @@
 // ! Copyright (c) 2024, Brandon Ramirez, brr.dev
 
-import { useContext } from 'react';
+'use client';
+
 import { DarkModeContext, DarkModeContextProps } from './DarkModeContext';
 
 export function useDarkMode(): DarkModeContextProps {

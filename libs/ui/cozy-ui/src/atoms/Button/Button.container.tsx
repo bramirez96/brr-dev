@@ -1,5 +1,7 @@
 // ! Copyright (c) 2024, Brandon Ramirez, brr.dev
 
+'use client';
+
 import { classnames } from '@bramirez96/classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
