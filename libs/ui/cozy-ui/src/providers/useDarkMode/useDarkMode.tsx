@@ -28,13 +28,14 @@ export type AutoDarkModeConfig = {
  * A simple hook that will automatically trigger the dark mode class on the document body.
  */
 export function useAutoDarkMode({
-    target = document.body,
+    target: inputTarget,
 }: AutoDarkModeConfig = {}): void {
     const { darkMode } = useDarkMode();
 
     useEffect(() => {
+        const target = inputTarget ?? document.body;
         target.classList.toggle('ui-dark-mode', darkMode);
-    }, [darkMode, target]);
+    }, [darkMode, inputTarget]);
 }
 
 /**
