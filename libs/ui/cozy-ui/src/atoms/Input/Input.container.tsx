@@ -1,9 +1,11 @@
 // ! Copyright (c) 2024, Brandon Ramirez, brr.dev
 
-import { InputContext, InputContextProps } from './Input.context';
+'use client';
+
 import { useId, useRef } from 'react';
 import { useEmptyTracker, useFocusTracker } from '../../utils/';
 import Input from './Input';
+import { InputContext, InputContextProps } from './Input.context';
 import { InputProps } from './Input.types';
 
 export type InputContainerProps = Partial<InputContextProps> & InputProps;

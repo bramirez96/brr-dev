@@ -1,6 +1,8 @@
 // Copyright (c) 2024 Brandon Ramirez (brr.dev)
 
+import { AutoDarkModeHelper } from '@bramirez96/cozy-ui';
 import { Metadata } from 'next';
+import { Providers } from './Providers';
 
 export const metadata: Metadata = {
     title: {
@@ -11,6 +13,9 @@ export const metadata: Metadata = {
         'A portfolio to showcase coding projects, technical writing, and shared libraries created by Brandon Ramirez.',
 };
 
+/**
+ * Base layout component which adds in all of the relevant
+ */
 export default function RootLayout({
     children,
 }: {
@@ -60,7 +65,12 @@ export default function RootLayout({
                 />
                 <meta property="og:url" content="https://brr.dev" />
             </head>
-            <body>{children}</body>
+            <body>
+                <Providers>
+                    <AutoDarkModeHelper />
+                    {children}
+                </Providers>
+            </body>
         </html>
     );
 }

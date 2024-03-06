@@ -1,5 +1,7 @@
 // ! Copyright (c) 2024, Brandon Ramirez, brr.dev
 
+'use client';
+
 import React, { useEffect } from 'react';
 
 export default function useFocusAutoscroll(
