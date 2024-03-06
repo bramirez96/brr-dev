@@ -1,4 +1,13 @@
 {
     "prettier.tabWidth": 4,
-    "editor.tabCompletion": "onlySnippets"
+    "editor.tabSize": 4,
+    "editor.indentSize": "tabSize",
+    "editor.tabCompletion": "onlySnippets",
+    "terminal.integrated.profiles.osx": {
+        "zsh": {
+            "path": "zsh",
+            "args": ["-i"]
+        }
+    },
+    "editor.detectIndentation": true
 }
