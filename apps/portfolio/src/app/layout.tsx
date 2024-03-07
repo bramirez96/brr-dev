@@ -1,4 +1,4 @@
-// Copyright (c) 2024 Brandon Ramirez (brr.dev)
+// ! Copyright (c) 2024 Brandon Ramirez (brr.dev)
 
 import { AutoDarkModeHelper } from '@bramirez96/cozy-ui';
 import { Metadata } from 'next';
